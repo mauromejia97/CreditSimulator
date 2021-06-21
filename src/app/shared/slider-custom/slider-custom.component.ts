@@ -23,8 +23,6 @@ export class SliderCustomComponent {
     this.returnValue.emit(this.valor)
   }
 
-
-  /* CREAR TIPO VALOR PARA EVENTO */
   onInputChange(event: MatSliderChange) {
     this.valor = event.value || 0 ;
     this.returnValue.emit(event.value || 0);
