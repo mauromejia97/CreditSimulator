@@ -1,0 +1,26 @@
+<div class="container">
+    <div>{{title}}</div>
+    <input matInput placeholder="Monto Minima" [(ngModel)]="valor" type="number" [min]="min" [max]="max"
+        (change)="cambio($event)">
+</div>
+
+<div class="containerSlide" >
+    <mat-slider aria-label="unit(s)" [min]="min" [max]="max" (input)="onInputChange($event)" type="number" [value]="valor">
+    </mat-slider>
+</div>
+
+<ng-container *ngIf="min === 5000 && max === 50000; else plazo">
+    <div class="values container" >
+        <div>${{min}}</div>
+        <div>${{max}}</div>
+    </div>
+</ng-container>
+
+<ng-template #plazo>
+    <div class="values container" >
+        <div>{{min}}</div>
+        <div>{{max}}</div>
+    </div>
+</ng-template>
+
+

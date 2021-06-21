@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 25px;
+}
+
+.containerSlide{
+    display: flex;
+    justify-content: center;
+}
+
+mat-slider {
+    width: 50%;
+}
+
+
+.values{
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+    font-size: 25px;
+}
+
+input{
+    border: 3px solid white;
+    background-color:rgb(6, 66, 143);
+    color: white;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+<div class="app-container">
+    <h1 class="firstTitle">Simulá tu credito</h1>
+    <app-slider-custom [min]="minMonto" [max]="maxMonto" [title]="titleAmount" (returnValue)="asignarMonto($event)">
+    </app-slider-custom>
+
+    <app-slider-custom [min]="minCuota" [max]="maxCuota" [title]="titleTerm" (returnValue)="asignarCuota($event)">
+    </app-slider-custom>
+
+    <div class="monto-container">
+        <h2 class="secondTitle">CUOTA FIJA POR MES<div class="cuotaFinal">${{cuotaFija |number:"1.2-2"}}</div>
+        </h2>
+        <div class="button-container">
+            <button class="main-button" mat-button color="primary">OBTENÉ TU CRÉDITO</button>
+            <button class="sec-button" mat-button color="primary">VER DETALLE DE CUOTAS</button>
+        </div>
+    </div>
+</div>
